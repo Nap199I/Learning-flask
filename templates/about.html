@@ -20,7 +20,7 @@
 
                 <div class="col-md-7">
                     <h3><a href="/about/{{ member.url }}">{{ loop.index }}. {{ member.name }}</a></h3>
-                    <!-- this is another way to do what the above line does <h3><a href="/about/{{ member.name|replace(' ', '-')|replace('&', 'and')|replace('Ó', 'O')|lower }}">{{ loop.index }}. {{ member.name }}</a></h3> -->
+                    <!-- this is another way to do what the above line does <h3><a href="/about/{{ member.name|replace(' ', '-')|replace('&', 'and')|replace('Ó', 'O')|lower }}">{{ loop.index }}. {{ member.name }}</a></h3> this would give an error because in our json file we have thorins full name but set the url to just thorin we would need to modify the python functionality to get it to work properly -->
                     <p>
                         {{ member.description }}
                     </p>
